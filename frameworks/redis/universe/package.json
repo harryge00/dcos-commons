@@ -1,0 +1,15 @@
+{
+  "packagingVersion": "4.0",
+  "upgradesFrom": ["*"],
+  "downgradesTo": ["*"],
+  "minDcosReleaseVersion": "1.9",
+  "name": "redis",
+  "version": "{{package-version}}",
+  "maintainer": "minykreva@gmail.com",
+  "description": "Redis Service on DC/OS",
+  "selected": false,
+  "framework": true,
+  "tags": ["redis"],
+  "postInstallNotes": "DC/OS Redis Service is being installed!\n\n\tDocumentation: http://YOURNAMEHERE.COM/DOCS\n\tIssues: http://YOURNAMEHERE.COM/SUPPORT",
+  "postUninstallNotes": "DC/OS Redis Service is being uninstalled."
+}

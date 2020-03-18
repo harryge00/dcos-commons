@@ -1,0 +1,51 @@
+{
+  "assets": {
+    "uris": {
+      "jre-tar-gz": "{{jre-url}}",
+      "libmesos-bundle-tar-gz": "{{libmesos-bundle-url}}",
+      "scheduler-zip": "{{artifact-dir}}/redis-scheduler.zip",
+      "bootstrap-zip": "{{artifact-dir}}/bootstrap.zip",
+      "executor-zip": "{{artifact-dir}}/executor.zip",
+      "stadis-zip": "{{artifact-dir}}/stadis-linux-amd64.zip",
+      "bootstrap-local": "http://api.redis.marathon.l4lb.thisdcos.directory/v1/files/bootstrap.zip",
+      "executor-local": "http://api.redis.marathon.l4lb.thisdcos.directory/v1/files/executor.zip"
+    },
+    "container": {
+      "docker": {
+        "hub-redis-3": "redis:3.2.11",
+        "hub-redis-4-alpine": "library/redis:4.0.1-alpine",
+        "hub-redis-3-alpine": "library/redis:3.2.11-alpine"
+      }
+    }
+  },
+  "images": {
+    "icon-small": "https://github.com/dcos/dcos-ui/blob/master/plugins/services/src/img/icon-service-default-small.png?raw=true",
+    "icon-medium": "https://github.com/dcos/dcos-ui/blob/master/plugins/services/src/img/icon-service-default-medium.png?raw=true",
+    "icon-large": "https://github.com/dcos/dcos-ui/blob/master/plugins/services/src/img/icon-service-default-large.png?raw=true"
+  },
+  "cli":{
+    "binaries":{
+      "darwin":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"{{sha256:dcos-service-cli-darwin}}" } ],
+          "kind":"executable",
+          "url":"{{artifact-dir}}/dcos-service-cli-darwin"
+        }
+      },
+      "linux":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"{{sha256:dcos-service-cli-linux}}" } ],
+          "kind":"executable",
+          "url":"{{artifact-dir}}/dcos-service-cli-linux"
+        }
+      },
+      "windows":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"{{sha256:dcos-service-cli.exe}}" } ],
+          "kind":"executable",
+          "url":"{{artifact-dir}}/dcos-service-cli.exe"
+        }
+      }
+    }
+  }
+}
