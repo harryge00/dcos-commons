@@ -4,7 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-import com.mesosphere.sdk.api.ResponseUtils;
+import com.mesosphere.sdk.http.ResponseUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

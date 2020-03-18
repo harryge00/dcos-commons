@@ -6,6 +6,9 @@ project(':frameworks/cassandra').name = 'cassandra'
 include 'frameworks/hdfs'
 project(':frameworks/hdfs').name = 'hdfs'
 
+include 'frameworks/redis'
+project(':frameworks/redis').name = 'redis'
+
 include 'frameworks/helloworld'
 project(':frameworks/helloworld').name = 'helloworld'
 

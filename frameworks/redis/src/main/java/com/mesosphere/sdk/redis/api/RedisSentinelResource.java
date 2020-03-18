@@ -3,7 +3,7 @@ package com.mesosphere.sdk.redis.api;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.mesosphere.sdk.api.ResponseUtils;
+import com.mesosphere.sdk.http.ResponseUtils;
 //import io.lettuce.core.KillArgs;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisURI;
