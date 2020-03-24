@@ -64,7 +64,7 @@ pods:
       {{#ENABLE_STADIS}}
       stadis:
         goal: RUNNING
-        cmd: "cd ${MESOS_SANDBOX} && ./bootstrap -print-env=true -resolve=true -resolve-hosts=master-0-redis.${FRAMEWORK_HOST},${TASK_NAME}.${FRAMEWORK_HOST} && ./stadis-linux-amd64 --redis-host master-${POD_INSTANCE_INDEX}-redis.${FRAMEWORK_HOST}:${REDIS_CLIENT_PORT} --statsd-host ${STATSD_UDP_HOST}:${STATSD_UDP_PORT} --prefix ${FRAMEWORK_NAME} --interval ${STADIS_INTERVAL}"
+        cmd: "cd ${MESOS_SANDBOX} && ./bootstrap -print-env=true -resolve=true -resolve-hosts=master-0-redis.${FRAMEWORK_HOST},${TASK_NAME}.${FRAMEWORK_HOST} && chmod +x stadis-linux-amd64 && ./stadis-linux-amd64 --redis-host master-${POD_INSTANCE_INDEX}-redis.${FRAMEWORK_HOST}:${REDIS_CLIENT_PORT} --statsd-host ${STATSD_UDP_HOST}:${STATSD_UDP_PORT} --prefix ${FRAMEWORK_NAME} --interval ${STADIS_INTERVAL}"
         cpus: 0.1
         memory: 32
         env:
@@ -130,7 +130,7 @@ pods:
       {{#ENABLE_STADIS}}
       stadis:
         goal: RUNNING
-        cmd: "cd ${MESOS_SANDBOX} && ./bootstrap -print-env=true -resolve=true -resolve-hosts=slaves-${POD_INSTANCE_INDEX}-redis.${FRAMEWORK_HOST},${TASK_NAME}.${FRAMEWORK_HOST} && ./stadis-linux-amd64 --redis-host slaves-${POD_INSTANCE_INDEX}-redis.${FRAMEWORK_HOST}:${REDIS_CLIENT_PORT} --statsd-host ${STATSD_UDP_HOST}:${STATSD_UDP_PORT} --prefix ${FRAMEWORK_NAME} --interval ${STADIS_INTERVAL}"
+        cmd: "cd ${MESOS_SANDBOX} && ./bootstrap -print-env=true -resolve=true -resolve-hosts=slaves-${POD_INSTANCE_INDEX}-redis.${FRAMEWORK_HOST},${TASK_NAME}.${FRAMEWORK_HOST} && chmod +x stadis-linux-amd64 && ./stadis-linux-amd64 --redis-host slaves-${POD_INSTANCE_INDEX}-redis.${FRAMEWORK_HOST}:${REDIS_CLIENT_PORT} --statsd-host ${STATSD_UDP_HOST}:${STATSD_UDP_PORT} --prefix ${FRAMEWORK_NAME} --interval ${STADIS_INTERVAL}"
         cpus: 0.1
         memory: 32
         env:
