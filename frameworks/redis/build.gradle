@@ -30,7 +30,7 @@ dependencies {
 distributions {
     main {
         baseName = 'redis-scheduler'
-        applicationName = 'redis'
+        applicationName = 'redis-cluster'
         version = ''
     }
 }
